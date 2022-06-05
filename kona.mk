@@ -650,10 +650,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/telephony_system-ext_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/telephony_system-ext-privapp-permissions-qti.xml
 
+# Insmod files
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/init.insmod.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.insmod.cfg
+
 # Rootdir
 PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.mdm.sh \
+    init.insmod.sh \
     init.mi.btmac.sh \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
